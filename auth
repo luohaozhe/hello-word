@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "39e253f5-e497-4190-aa0f-b616a47a69e5",
+		"name": "auth Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Client-key",
+						"value": "Ph!no!icApp"
+					},
+					{
+						"key": "x-auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJyMVg3TFhrRHpIIiwiX2lkIjoiNWI0OThkYzJjMmVlM2NkYTkyZGU1NTY2IiwidXNlcl90eXBlIjo0LCJleHBpcmVkX2F0IjoxNTM5MjY3NTE4OTcyLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTM2Njc1NTE4fQ.CmKvTPsrmP0choRJihr-J1YCXUdb_nSFK1iprYLbJwU",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email_phone\": \"chen.caixia@icycle-global.com\",\n\t\"password\": \"Chen@123!\"\n}"
+				},
+				"url": {
+					"raw": "https://api.aixunhuan.com.cn/api/v1.0/user/signin",
+					"protocol": "https",
+					"host": [
+						"api",
+						"aixunhuan",
+						"com",
+						"cn"
+					],
+					"path": [
+						"api",
+						"v1.0",
+						"user",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Client-key",
+						"value": "Ph!no!icApp"
+					},
+					{
+						"key": "x-auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJyMVg3TFhrRHpIIiwiX2lkIjoiNWI0OThkYzJjMmVlM2NkYTkyZGU1NTY2IiwidXNlcl90eXBlIjo0LCJhY2Nlc3NfY29kZXMiOlsiMzAwMCIsIjkwMDAiXSwiZXhwaXJlZF9hdCI6MTUzOTMyMTA0MDYxMSwiYWNjZXNzIjoiYXV0aCIsImlhdCI6MTUzNjcyOTA0MH0.tPYZ-g6kilYb56PRT2hXPKfvUJaWMdHIXitbYnCJLy8"
+					},
+					{
+						"key": "languageId",
+						"value": "1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"suhaib.expert1823@gmail.com\",\n\t\"user_type\": \"1\",\n\t\"phone\": \"02254234178341\",\n\t\"password\": \"12341234\",\n\t\"username\": \"expert test\",\n\t\"country_code\": \"LY\",\n\t\"barcode\": \"\"\n}"
+				},
+				"url": {
+					"raw": "https://api-dev.aixunhuan.com.cn/api/v1.0/user/signup",
+					"protocol": "https",
+					"host": [
+						"api-dev",
+						"aixunhuan",
+						"com",
+						"cn"
+					],
+					"path": [
+						"api",
+						"v1.0",
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Client-key",
+						"value": "Ph!no!icApp"
+					},
+					{
+						"key": "x-auth",
+						"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJyMVg3TFhrRHpIIiwiX2lkIjoiNWI0OThkYzJjMmVlM2NkYTkyZGU1NTY2IiwidXNlcl90eXBlIjo0LCJhY2Nlc3NfY29kZXMiOlsiMzAwMCIsIjIwMDAiLCI0MDAwIiwiNTAwMCIsIjcwMDAiLCI4MDAwIiwiOTAwMCIsIjEwMDAwIiwiMTEwMDAiLCIxMTAwMSIsIjExMDAyIiwiMTEwMDMiLCI1MDAxIiwiNTAwMiIsIjExMDA0IiwiMTAwMCIsIjEyMDAwIiwiMTMwMDkiLCIyNDAwMCIsIjI0MDAxIiwiMjQwMDkiLCIyNDAwMiIsIjE4MDAyIiwiMTgwMDAiLCIxODAwMSIsIjIyMDAwIiwiMTAwMDEiLCIyMDAwOSIsIjEzMDAxIiwiNDAwOSIsIjE4MDAzIiwiMTgwMDQiLCIzMDAwMCIsIjYwMDAwIiwiNTAwOSIsIjE1MDAwIl0sImV4cGlyZWRfYXQiOiIxNTQzMjA0ODQwMzkwMjU5MjAwMDAwMCIsImFjY2VzcyI6ImF1dGgiLCJpYXQiOjE1NDMyMDQ4NDAsImV4cCI6MTU0MzIwNDg0MX0.LNES5iz0KzuKxhKp8oGpF8magZ-rotypud8X37mgHx0",
+						"disabled": true
+					},
+					{
+						"key": "languageId",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/v1.0/refreshToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"refreshToken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
